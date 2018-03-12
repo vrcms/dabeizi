@@ -7,721 +7,14 @@
   <link rel="stylesheet" href="../assets/css/global.css">
   <link rel="stylesheet" href="../assets/css/nav.css"> -->
   <link rel="stylesheet" href="../assets/css/workbench.main.css">
-  <style type="text/css" class="contributedColorTheme">
-    .monaco-editor .minimap-slider,
-    .monaco-editor .minimap-slider .minimap-slider-horizontal {
-      background: rgba(121, 121, 121, 0.2);
-    }
+  <link rel="stylesheet" href="../assets/css/theme.css">
 
-    .monaco-editor .minimap-slider:hover,
-    .monaco-editor .minimap-slider:hover .minimap-slider-horizontal {
-      background: rgba(100, 100, 100, 0.35);
-    }
+  <link rel="stylesheet" href="../assets/css/dabeizi.css">
+ 
 
-    .monaco-editor .minimap-slider.active,
-    .monaco-editor .minimap-slider.active .minimap-slider-horizontal {
-      background: rgba(191, 191, 191, 0.2);
-    }
 
-    .monaco-editor .minimap-shadow-visible {
-      box-shadow: #000000 -6px 0 6px -6px inset;
-    }
-
-    .monaco-editor .scroll-decoration {
-      box-shadow: #000000 0 6px 6px -6px inset;
-    }
-
-    .monaco-editor .focused .selected-text {
-      background-color: #264f78;
-    }
-
-    .monaco-editor .selected-text {
-      background-color: #3a3d41;
-    }
-
-    .monaco-editor,
-    .monaco-editor-background,
-    .monaco-editor .inputarea.ime-input {
-      background-color: #1e1e1e;
-    }
-
-    .monaco-editor,
-    .monaco-editor .inputarea.ime-input {
-      color: #d4d4d4;
-    }
-
-    .monaco-editor .margin {
-      background-color: #1e1e1e;
-    }
-
-    .monaco-editor .rangeHighlight {
-      background-color: rgba(255, 255, 255, 0.04);
-    }
-
-    .vs-whitespace {
-      color: rgba(227, 228, 226, 0.16) !important;
-    }
-
-    .monaco-editor .view-overlays .current-line {
-      border: 2px solid #282828;
-    }
-
-    .monaco-editor .margin-view-overlays .current-line-margin {
-      border: 2px solid #282828;
-    }
-
-    .monaco-editor .lines-content .cigr {
-      background-color: #404040;
-    }
-
-    .monaco-editor .line-numbers {
-      color: #5a5a5a;
-    }
-
-    .monaco-editor .view-ruler {
-      background-color: #5a5a5a;
-    }
-
-    .monaco-editor .cursor {
-      background-color: #aeafad;
-      border-color: #aeafad;
-      color: #515052;
-    }
-
-    .monaco-editor .squiggly-c-error {
-      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ea4646'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
-    }
-
-    .monaco-editor .squiggly-b-warning {
-      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%234d9e4d'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
-    }
-
-    .monaco-editor .squiggly-a-info {
-      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
-    }
-
-    .monaco-diff-editor .diff-review-line-number {
-      color: #5a5a5a;
-    }
-
-    .monaco-diff-editor .diff-review-shadow {
-      box-shadow: #000000 0 -6px 6px -6px inset;
-    }
-
-    .monaco-editor .line-insert,
-    .monaco-editor .char-insert {
-      background-color: rgba(155, 185, 85, 0.2);
-    }
-
-    .monaco-diff-editor .line-insert,
-    .monaco-diff-editor .char-insert {
-      background-color: rgba(155, 185, 85, 0.2);
-    }
-
-    .monaco-editor .inline-added-margin-view-zone {
-      background-color: rgba(155, 185, 85, 0.2);
-    }
-
-    .monaco-editor .line-delete,
-    .monaco-editor .char-delete {
-      background-color: rgba(255, 0, 0, 0.2);
-    }
-
-    .monaco-diff-editor .line-delete,
-    .monaco-diff-editor .char-delete {
-      background-color: rgba(255, 0, 0, 0.2);
-    }
-
-    .monaco-editor .inline-deleted-margin-view-zone {
-      background-color: rgba(255, 0, 0, 0.2);
-    }
-
-    .monaco-diff-editor.side-by-side .editor.modified {
-      box-shadow: -6px 0 5px -5px #000000;
-    }
-
-    .monaco-editor .bracket-match {
-      background-color: rgba(0, 100, 0, 0.1);
-    }
-
-    .monaco-editor .bracket-match {
-      border: 1px solid #888888;
-    }
-
-    .monaco-editor .codelens-decoration {
-      color: #999999;
-    }
-
-    .monaco-editor .codelens-decoration>a:hover {
-      color: #4e94ce !important;
-    }
-
-    .monaco-editor .findOptionsWidget {
-      background-color: #2d2d30;
-    }
-
-    .monaco-editor .findOptionsWidget {
-      box-shadow: 0 2px 8px #000000;
-    }
-
-    .monaco-editor .findMatch {
-      background-color: rgba(234, 92, 0, 0.33);
-    }
-
-    .monaco-editor .currentFindMatch {
-      background-color: #515c6a;
-    }
-
-    .monaco-editor .findScope {
-      background-color: rgba(58, 61, 65, 0.4);
-    }
-
-    .monaco-editor .find-widget {
-      background-color: #2d2d30;
-    }
-
-    .monaco-editor .find-widget {
-      box-shadow: 0 2px 8px #000000;
-    }
-
-    .monaco-editor .find-widget.no-results .matchesCount {
-      color: #f48771;
-    }
-
-    .monaco-editor .find-widget .monaco-sash {
-      background-color: #454545;
-      width: 3px !important;
-      margin-left: -4px;
-    }
-
-    .monaco-workbench .simple-find-part {
-      background-color: #2d2d30 !important;
-    }
-
-    .monaco-workbench .simple-find-part {
-      box-shadow: 0 2px 8px #000000;
-    }
-
-    .monaco-editor .hoverHighlight {
-      background-color: rgba(38, 79, 120, 0.25);
-    }
-
-    .monaco-editor .monaco-editor-hover {
-      background-color: #2d2d30;
-    }
-
-    .monaco-editor .monaco-editor-hover {
-      border: 1px solid #454545;
-    }
-
-    .monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) {
-      border-top: 1px solid rgba(69, 69, 69, 0.5);
-    }
-
-    .monaco-editor .monaco-editor-hover a {
-      color: #4080d0;
-    }
-
-    .monaco-editor .monaco-editor-hover code {
-      background-color: rgba(10, 10, 10, 0.4);
-    }
-
-    .monaco-editor.vs .valueSetReplacement {
-      outline: solid 2px #888888;
-    }
-
-    .monaco-editor .detected-link-active {
-      color: #4e94ce !important;
-    }
-
-    .monaco-editor .monaco-editor-overlaymessage .anchor {
-      border-top-color: #007acc;
-    }
-
-    .monaco-editor .monaco-editor-overlaymessage .message {
-      border: 1px solid #007acc;
-    }
-
-    .monaco-editor .monaco-editor-overlaymessage .message {
-      background-color: #063b49;
-    }
-
-    .monaco-editor .parameter-hints-widget {
-      border: 1px solid #454545;
-    }
-
-    .monaco-editor .parameter-hints-widget.multiple .body {
-      border-left: 1px solid rgba(69, 69, 69, 0.5);
-    }
-
-    .monaco-editor .parameter-hints-widget .signature.has-docs {
-      border-bottom: 1px solid rgba(69, 69, 69, 0.5);
-    }
-
-    .monaco-editor .parameter-hints-widget {
-      background-color: #2d2d30;
-    }
-
-    .monaco-editor .parameter-hints-widget a {
-      color: #4080d0;
-    }
-
-    .monaco-editor .parameter-hints-widget code {
-      background-color: rgba(10, 10, 10, 0.4);
-    }
-
-    .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {
-      color: #0097fb;
-    }
-
-    .monaco-editor .suggest-widget {
-      color: #d4d4d4;
-    }
-
-    .monaco-editor .suggest-widget a {
-      color: #4080d0;
-    }
-
-    .monaco-editor .suggest-widget code {
-      background-color: rgba(10, 10, 10, 0.4);
-    }
-
-    .monaco-editor .focused .selectionHighlight {
-      background-color: rgba(173, 214, 255, 0.15);
-    }
-
-    .monaco-editor .selectionHighlight {
-      background-color: rgba(173, 214, 255, 0.07);
-    }
-
-    .monaco-editor .wordHighlight {
-      background-color: rgba(87, 87, 87, 0.72);
-    }
-
-    .monaco-editor .wordHighlightStrong {
-      background-color: rgba(0, 73, 114, 0.72);
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree .referenceMatch {
-      background-color: rgba(234, 92, 0, 0.3);
-    }
-
-    .monaco-editor .reference-zone-widget .preview .reference-decoration {
-      background-color: rgba(255, 143, 0, 0.6);
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree {
-      background-color: #252526;
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree {
-      color: #bbbbbb;
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree .reference-file {
-      color: #ffffff;
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
-      background-color: rgba(51, 153, 255, 0.2);
-    }
-
-    .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
-      color: #ffffff !important;
-    }
-
-    .monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,
-    .monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {
-      background-color: #001f33;
-    }
-
-    .monaco-editor .reference-zone-widget .preview .monaco-editor .margin {
-      background-color: #001f33;
-    }
-
-    .monaco-editor .goto-definition-link {
-      color: #4e94ce !important;
-    }
-
-    .monaco-workbench .notifications-list-container .notification-list-item .notification-list-item-message a {
-      color: #4080d0;
-    }
-
-    .monaco-workbench .notifications-list-container .notification-list-item .notification-list-item-message a:focus {
-      outline-color: rgba(14, 99, 156, 0.6);
-    }
-
-    .monaco-editor .accessibilityHelpWidget {
-      background-color: #2d2d30;
-    }
-
-    .monaco-editor .accessibilityHelpWidget {
-      box-shadow: 0 2px 8px #000000;
-    }
-
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus,
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label.checked {
-      border-bottom: 1px solid;
-    }
-
-
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:hover,
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label.checked {
-      color: #e7e7e7;
-      border-bottom-color: rgba(128, 128, 128, 0.35);
-    }
-
-
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label {
-      color: rgba(231, 231, 231, 0.5);
-    }
-
-
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus {
-      border-bottom-color: rgba(14, 99, 156, 0.6) !important;
-    }
-
-
-    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus {
-      outline: none;
-    }
-
-    .monaco-shell .feedback-form .sentiment.checked {
-      border: 1px solid #007acc;
-    }
-
-    .monaco-shell .feedback-form .content .channels a {
-      color: #0e639c;
-    }
-
-    .monaco-workbench>.part.statusbar>.statusbar-item .dropdown.send-feedback:hover {
-      background-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent .monaco-editor-background,
-    .monaco-workbench>.part.editor>.content .walkThroughContent .margin-view-overlays {
-      background: rgba(0, 0, 0, .4);
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent a {
-      color: #4080d0;
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent a:hover,
-    .monaco-workbench>.part.editor>.content .walkThroughContent a:active {
-      color: #4080d0;
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent a:focus {
-      outline-color: rgba(14, 99, 156, 0.6);
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent code,
-    .monaco-workbench>.part.editor>.content .walkThroughContent .shortcut {
-      color: #d7ba7d;
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent blockquote {
-      background: rgba(127, 127, 127, 0.1);
-    }
-
-    .monaco-workbench>.part.editor>.content .walkThroughContent blockquote {
-      border-color: rgba(0, 122, 204, 0.5);
-    }
-
-    .monaco-workbench .panel.integrated-terminal .xterm.focus .xterm-viewport,
-    .monaco-workbench .panel.integrated-terminal .xterm:focus .xterm-viewport,
-    .monaco-workbench .panel.integrated-terminal .xterm:hover .xterm-viewport {
-      background-color: rgba(121, 121, 121, 0.4) !important;
-    }
-
-    .monaco-workbench .panel.integrated-terminal .xterm .xterm-viewport::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(100, 100, 100, 0.7);
-    }
-
-    .monaco-workbench .panel.integrated-terminal .xterm .xterm-viewport::-webkit-scrollbar-thumb:active {
-      background-color: rgba(191, 191, 191, 0.4);
-    }
-
-    .monaco-workbench>.part.statusbar.debugging>.statusbar-item .mask-icon {
-      background-color: #ffffff !important;
-    }
-
-    .monaco-editor .tm-inspect-widget {
-      border: 1px solid #454545;
-    }
-
-    .monaco-editor .tm-inspect-widget .tm-metadata-separator {
-      background-color: #454545;
-    }
-
-    .monaco-editor .tm-inspect-widget {
-      background-color: #2d2d30;
-    }
-
-    .monaco-workbench>.part.editor>.content.dragged-over>.one-editor-silo>.container>.title.active .tabs-container>.tab.sizing-shrink.dragged-over:not(.active):not(.dragged)>.tab-label::after,
-    .monaco-workbench>.part.editor>.content.dragged-over>.one-editor-silo>.container>.title.inactive .tabs-container>.tab.sizing-shrink.dragged-over:not(.dragged)>.tab-label::after {
-      background: linear-gradient(to left, #3c3f41, transparent);
-    }
-
-
-    .monaco-workbench>.part.editor>.content:not(.dragged-over)>.one-editor-silo>.container>.title .tabs-container>.tab.sizing-shrink.active:not(.dragged)>.tab-label::after {
-      background: linear-gradient(to left, #1e1e1e, transparent);
-    }
-
-    .monaco-workbench>.part.editor>.content.dragged-over>.one-editor-silo>.container>.title .tabs-container>.tab.sizing-shrink.active:not(.dragged)>.tab-label::after {
-      background: linear-gradient(to left, #1e1e1e, transparent);
-    }
-
-
-    .monaco-workbench>.part.editor>.content:not(.dragged-over)>.one-editor-silo>.container>.title .tabs-container>.tab.sizing-shrink:not(.dragged)>.tab-label::after {
-      background: linear-gradient(to left, #2d2d2d, transparent);
-    }
-
-    .monaco-workbench>.part.editor>.content.dragged-over>.one-editor-silo>.container>.title .tabs-container>.tab.sizing-shrink:not(.dragged)>.tab-label::after {
-      background: linear-gradient(to left, #2d2d2d, transparent);
-    }
-
-    .monaco-workbench>.notifications-center .notifications-list-container .monaco-list-row[data-last-element="false"]>.notification-list-item {
-      border-bottom: 1px solid #3b3b3e;
-    }
-
-    .monaco-workbench>.part.statusbar>.statusbar-item a:hover:not([disabled]):not(.disabled) {
-      background-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .monaco-workbench>.part.statusbar>.statusbar-item a:active:not([disabled]):not(.disabled) {
-      background-color: rgba(255, 255, 255, 0.18);
-    }
-
-    .monaco-workbench>.part.statusbar>.statusbar-item .status-bar-info {
-      background-color: #388a34;
-    }
-
-    .monaco-workbench>.part.statusbar>.statusbar-item a.status-bar-info:hover:not([disabled]):not(.disabled) {
-      background-color: #369432;
-    }
-
-    .keybindings-editor>.keybindings-body>.keybindings-list-container .monaco-list-row>.column .highlight {
-      color: #0097fb;
-    }
-
-    .monaco-editor .dirty-diff-modified {
-      border-left: 3px solid #0c7d9d;
-    }
-
-    .monaco-editor .dirty-diff-modified:before {
-      background: #0c7d9d;
-    }
-
-
-    .monaco-editor .dirty-diff-added {
-      border-left: 3px solid #587c0c;
-    }
-
-    .monaco-editor .dirty-diff-added:before {
-      background: #587c0c;
-    }
-
-
-    .monaco-editor .dirty-diff-deleted:after {
-      border-left: 4px solid #94151b;
-    }
-
-    .monaco-editor .dirty-diff-deleted:before {
-      background: #94151b;
-    }
-
-    .monaco-workbench>.welcomeOverlay>.key {
-      color: #cccccc;
-    }
-
-    .monaco-workbench>.welcomeOverlay {
-      background: rgba(0, 0, 0, 0.52);
-    }
-
-    .monaco-workbench>.welcomeOverlay>.key>.shortcut {
-      color: #d7ba7d;
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage .caption {
-      color: #cccccc;
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage .detail {
-      color: rgba(204, 204, 204, 0.7);
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage .commands li button {
-      background: rgba(0, 0, 0, .2);
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage .commands li button:hover {
-      background: rgba(200, 235, 255, .072);
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage a {
-      color: #4080d0;
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage a:hover,
-    .monaco-workbench>.part.editor>.content .welcomePage a:active {
-      color: #4080d0;
-    }
-
-    .monaco-workbench>.part.editor>.content .welcomePage a:focus {
-      outline-color: rgba(14, 99, 156, 0.6);
-    }
-
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item.active .action-label,
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item.checked .action-label,
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:focus .action-label,
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:hover .action-label {
-      opacity: 1;
-    }
-
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item .action-label {
-      opacity: 0.6;
-    }
-
-    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:focus:before {
-      border-left-color: rgba(14, 99, 156, 0.6);
-    }
-
-
-    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:hover .action-label,
-    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item.checked .action-label {
-      color: #e7e7e7;
-      border-bottom-color: rgba(128, 128, 128, 0.35);
-    }
-
-
-    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item .action-label {
-      color: rgba(231, 231, 231, 0.5);
-    }
-
-
-    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:focus .action-label {
-      color: #e7e7e7;
-      border-bottom-color: rgba(14, 99, 156, 0.6) !important;
-      border-bottom: 1px solid;
-    }
-
-
-    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:focus {
-      outline: none;
-    }
-
-    .monaco-action-bar .action-item .action-label.extension-action.built-in-status {
-      border-color: #cccccc;
-    }
-
-    .monaco-action-bar .action-item .action-label.extension-action {
-      background-color: #0e639c;
-    }
-
-    .monaco-action-bar .action-item .action-label.extension-action {
-      color: #ffffff;
-    }
-
-    .monaco-action-bar .action-item:hover .action-label.extension-action {
-      background-color: #1177bb;
-    }
-
-    .monaco-action-bar .action-item .action-label.extension-action.prominent {
-      background-color: #327e36;
-    }
-
-    .monaco-action-bar .action-item .action-label.extension-action.prominent {
-      color: #ffffff;
-    }
-
-    .monaco-action-bar .action-item:hover .action-label.extension-action.prominent {
-      background-color: #28632b;
-    }
-
-    .monaco-workbench .search-view .findInFileMatch {
-      background-color: rgba(234, 92, 0, 0.33);
-    }
-
-    .monaco-workbench .search-view .replaceMatch {
-      background-color: rgba(155, 185, 85, 0.2);
-    }
-
-    .monaco-workbench .search-view .replace.findInFileMatch {
-      background-color: rgba(255, 0, 0, 0.2);
-    }
-
-    .monaco-shell {
-      color: #cccccc;
-    }
-
-    .monaco-shell .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,
-    .monaco-shell .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {
-      color: #0097fb;
-    }
-
-    .monaco-workbench {
-      background-color: #252526;
-    }
-
-    .monaco-shell .monaco-scrollable-element>.shadow.top {
-      box-shadow: #000000 0 6px 6px -6px inset;
-    }
-
-    .monaco-shell .monaco-scrollable-element>.shadow.left {
-      box-shadow: #000000 6px 0 6px -6px inset;
-    }
-
-    .monaco-shell .monaco-scrollable-element>.shadow.top.left {
-      box-shadow: #000000 6px 6px 6px -6px inset;
-    }
-
-
-    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider {
-      background: rgba(121, 121, 121, 0.4);
-    }
-
-
-    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider:hover {
-      background: rgba(100, 100, 100, 0.7);
-    }
-
-
-    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider.active {
-      background: rgba(191, 191, 191, 0.4);
-    }
-
-
-    .monaco-shell [tabindex="0"]:focus,
-    .monaco-shell .synthetic-focus,
-    .monaco-shell select:focus,
-    .monaco-shell .monaco-tree.focused.no-focused-item:focus:before,
-    .monaco-shell .monaco-list:not(.element-focused):focus:before,
-    .monaco-shell input[type="button"]:focus,
-    .monaco-shell input[type="text"]:focus,
-    .monaco-shell button:focus,
-    .monaco-shell textarea:focus,
-    .monaco-shell input[type="search"]:focus,
-    .monaco-shell input[type="checkbox"]:focus {
-      outline-color: rgba(14, 99, 156, 0.6);
-    }
-  </style>
-
-
-  <style>
-    .monaco-shell {
-      background-color: #1e1e1e;
-      color: #CCCCCC;
-    }
-  </style>
-  <title></title>
-  <style type="text/css" media="screen">
-    .monaco-editor .dirty-diff-modified,
-    .monaco-editor .dirty-diff-added {
-      border-left-width: 3px;
-    }
-  </style>
+  <title>dabeizi</title>
+  
 </head>
 
 <body class="monaco-shell vs-dark vscode-theme-defaults-themes-dark_plus-json file-icons-enabled monaco-font-aliasing-undefined">
@@ -731,15 +24,22 @@
 
 
 
-  <div class="monaco-shell-content">
-    <div style="width: 1008px; height: 410px;">
+  <div class="monaco-shell-content" >
+    <div id="allcontainer">
       <div class="monaco-workbench-container">
-        <div class="monaco-workbench windows nosidebar nopanel" id="workbench.main.container" style="top: 0px; right: 0px; bottom: 0px; left: 0px; position: relative; width: 1008px; height: 410px;">
+        <div class="monaco-workbench windows nosidebar nopanel" id="workbench-main-container" style="top: 0px; right: 0px; bottom: 0px; left: 0px; position: relative;">
+
+          <!-- 顶部输入 -->
+          <div style="height:35px">
+            当前网址: <input type="text" value="http://www.baidu.com" />
+          </div>
+          <!-- 顶部输入 end-->
 
 
-
-          <div class="part activitybar left" id="workbench.parts.activitybar" role="navigation" aria-hidden="false" style="background-color: rgb(51, 51, 51); height: 388px; top: 0px; bottom: 0px; left: 0px; position: absolute;">
-            <div class="content" style="width: 50px; height: 388px;">
+          <!-- 最左边工具栏 -->
+          <div class="part activitybar left" id="workbench-parts-activitybar" role="navigation" aria-hidden="false" style="background-color: rgb(51, 51, 51); 
+          top: 35px; bottom: 0px; left: 0px; position: absolute;">
+            <div class="content" style="width: 50px; ">
               <div class="composite-bar">
                 <div class="monaco-action-bar vertical">
                   <ul class="actions-container" role="toolbar" aria-label="活动视图切换器">
@@ -797,14 +97,18 @@
 
 
 
-          <div class="part editor has-watermark max-height-478px" id="workbench.parts.editor" role="main" style="background-color: rgb(30, 30, 30); width: 958px; height: 388px; top: 0px; right: 0px; bottom: 22px; left: 50px; position: absolute;">
-            <div class="content vertical-layout" style="background-color: rgb(45, 45, 45); width: 958px; height: 388px;">
+          <div class="part editor has-watermark max-height-478px" id="workbench-parts-editor" role="main" style="background-color: rgb(30, 30, 30);
+           
 
-              <div class="one-editor-silo editor-one" style="background-color: rgb(30, 30, 30); width: 958px; height: 388px;">
+           top: 35px; right: 0px; bottom: 22px; left: 50px; position: absolute;">
+            <div class="content vertical-layout wincontainer" style="background-color: rgb(45, 45, 45); ">
+
+              <div class="one-editor-silo editor-one wincontainer" style="background-color: rgb(30, 30, 30); ">
                 <div class="container" data-keybinding-context="1">
                   <div class="title tabs show-file-icons active" style="background-color: rgb(37, 37, 38);">
                     <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
                       <div role="tablist" class="tabs-container" style="overflow: hidden;">
+                        <!-- tab start -->
                         <div draggable="true" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
                           title="欢迎使用" aria-selected="false" style="background-color: rgb(45, 45, 45);">
                           <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon tab-label italic" title="walkThrough:/d:/Program Files/Microsoft VS Code/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page"
@@ -823,8 +127,12 @@
                             </div>
                           </div>
                         </div>
+
+
                         <div draggable="true" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme active" aria-label="Untitled-1, tab"
-                          title="Untitled-1" aria-selected="true" style="border-left-color: rgb(37, 37, 38); border-right-color: rgb(37, 37, 38); background-color: rgb(30, 30, 30);">
+                          title="Untitled-1" aria-selected="true" style="border-left-color: rgb(37, 37, 38); border-right-color: rgb(37, 37, 38); background-color: rgb(30, 30, 30);
+                          border-top-color:#007acc;border-top-width:2px;
+                          ">
                           <div class="monaco-icon-label file-icon untitled-1-name-file-icon ext-file-icon tab-label" title="Untitled-1" style="color: rgb(255, 255, 255);">
                             <div class="monaco-icon-label-description-container">
                               <a class="label-name">Untitled-1</a>
@@ -840,7 +148,16 @@
                             </div>
                           </div>
                         </div>
+
+
+
+                       
+
+
+
+                        <!-- tab end -->
                       </div>
+
                       <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 891px; height: 3px; left: 0px; bottom: 0px;">
                         <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 3px; will-change: transform; width: 891px;"></div>
                       </div>
@@ -879,7 +196,7 @@
 
                   <div class="editor-container web-container" role="tabpanel" id="workbench.editors.textResourceEditor" data-keybinding-context="4" aria-hidden="false"
                     aria-label="Untitled-1。无标题文件文本编辑器。，所在组为: 1。" data-mode-id="plaintext">
-                    <webview style="height: 400px;" id="testwebview" src="https://www.youku.com/" autosize allowpopups disablewebsecurity ></webview>
+                    <webview style="width:100%;height:100%;" id="testwebview" src="https://www.youku.com/" autosize allowpopups disablewebsecurity ></webview>
 
                     
                   </div>
@@ -894,12 +211,11 @@
           <!-- 右边编辑器区域完成 -->
 
           <!-- 最底部 状态栏 -->
-          <div class="part statusbar" id="workbench.parts.statusbar" role="contentinfo" aria-hidden="false" style="background-color: rgb(104, 33, 122); color: rgb(255, 255, 255); top: 404px; position: absolute;">
-            <div class="statusbar-item right statusbar-entry">
-              <span title="没有通知">
-                <span class="octicon octicon-bell "></span>
-              </span>
-            </div>
+          <div class="part statusbar" id="workbench-parts-statusbar" role="contentinfo" aria-hidden="false" style="background-color: rgb(104, 33, 122); color: rgb(255, 255, 255); 
+           position: absolute;">
+
+
+            
             <div class="statusbar-item right">
               <div class="dropdown send-feedback" title="Tweet 反馈">
                 <div class="dropdown-label send-feedback mask-icon" style="background-color: rgb(255, 255, 255);"></div>
@@ -913,6 +229,7 @@
                 </a>
               </div>
             </div>
+
             <div class="statusbar-item right">
               <div class="editor-statusbar-item">
                 <a class="editor-status-tabfocusmode status-bar-info" title="禁用辅助功能模式" style="display: none;">按 Tab 移动焦点</a>
@@ -929,6 +246,8 @@
             <div class="statusbar-item right">
               <a class=".zoom-statusbar-item" style="display: none;"></a>
             </div>
+
+            
             <div class="statusbar-item left">
               <div class="task-statusbar-item" title="问题">
                 <a class="task-statusbar-item-label">
@@ -941,7 +260,14 @@
                 </a>
                 <div class="task-statusbar-item-building builder-hidden" aria-hidden="true">正在生成...</div>
               </div>
+
+             
             </div>
+
+
+
+
+
             <div class="statusbar-item left">
               <a class="task-statusbar-runningItem builder-hidden" aria-hidden="true">
                 <div class="task-statusbar-runningItem-label" title="显示运行中的任务"></div>
@@ -1108,7 +434,6 @@
         webView.src = e.url;
     });
 
-
     //require('./assets/imports')
     //require('./assets/ex-links')
     require('../assets/nav');
@@ -1116,6 +441,53 @@
           //require('./assets/code-blocks')
           //require('./assets/normalize-shortcuts')
   </script>
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+
+  <script>
+
+    var win_width,win_height;
+
+  $(window).resize(function(){
+    //allcontainer
+    win_width = $(window).width();
+    win_height = $(window).height();
+    updatelayout();
+
+  });
+
+
+  //更新为最新的窗口大小
+  function updatelayout(){
+    //整体大小变更    
+    setobj_width_height( $("#allcontainer") );
+    setobj_width_height( $("#workbench-main-container") );
+    setobj_width_height( $("#workbench-parts-editor") );
+    setobj_width_height( $(".wincontainer" ));
+
+    //webview 大小调整
+    $(".web-container").css("width",(win_width -50)+ 'px');
+    $(".web-container").css("height",(win_height -22)+ 'px');
+    
+   
+    
+    //左侧高度变更
+    $("#workbench-parts-activitybar").css('height',win_height + 'px');
+    $("#workbench-parts-activitybar > .content").css('height',(win_height -22) + 'px');
+
+    //状态栏 位置调整
+    $("#workbench-parts-statusbar").css('top',(win_height - 22)+ 'px');
+
+
+  }
+
+  function setobj_width_height(obj){
+    obj.css('width',win_width+'px');
+    obj.css('height',win_height+'px');
+  }
+  </script>
+
 </body>
 
 </html>
