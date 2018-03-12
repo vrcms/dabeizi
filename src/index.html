@@ -879,7 +879,7 @@
 
                   <div class="editor-container web-container" role="tabpanel" id="workbench.editors.textResourceEditor" data-keybinding-context="4" aria-hidden="false"
                     aria-label="Untitled-1。无标题文件文本编辑器。，所在组为: 1。" data-mode-id="plaintext">
-                    <webview style="height: 400px;" src="https://www.youku.com/" autosize allowpopups ></webview>
+                    <webview style="height: 400px;" id="testwebview" src="https://www.youku.com/" autosize allowpopups disablewebsecurity ></webview>
 
                     
                   </div>
@@ -1101,6 +1101,12 @@
 
 
   <script>
+
+    //webview 内部的连接跳转问题
+    const webView = document.getElementById('testwebview');    
+    webView.addEventListener('new-window', function (e) {
+        webView.src = e.url;
+    });
 
 
     //require('./assets/imports')
