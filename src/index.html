@@ -3,11 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  
+        
   <!-- <link rel="stylesheet" href="../assets/css/nativize.css">
   <link rel="stylesheet" href="../assets/css/global.css">
   <link rel="stylesheet" href="../assets/css/nav.css"> -->
   <link rel="stylesheet" href="../assets/css/workbench.main.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
+  
+  <link rel="stylesheet" href="../assets/css/amazeui.css">
 
   <link rel="stylesheet" href="../assets/css/dabeizi.css">
  
@@ -30,10 +40,74 @@
         <div class="monaco-workbench windows nosidebar nopanel" id="workbench-main-container" style="top: 0px; right: 0px; bottom: 0px; left: 0px; position: relative;">
 
           <!-- 顶部输入 -->
-          <div style="height:35px">
-            当前网址: <input type="text" value="http://www.baidu.com" />
-          </div>
+
+          <header class="am-topbar">
+              <h1 class="am-topbar-brand">
+                <a href="#">Amaze UI</a>
+              </h1>
+            
+             
+              <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+
+
+                <ul class="am-nav am-nav-pills am-topbar-nav">
+                  <li ><a href="#" id="btn-goback"><i class="am-icon-chevron-left"></i></a></li>
+                  <li><a href="#" id="btn-goforward"><i class="am-icon-chevron-right"></i></a></li>
+                  <li><a href="#" id="btn-reload"><i class="am-icon-rotate-right"></i></a></li>
+
+                  <li class="am-dropdown" data-am-dropdown>
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                        <i class="am-icon-chevron-down"></i>                        
+                    </a>
+                    <ul class="am-dropdown-content">                      
+                      <li><a href="#">待定</a></li>                     
+                    </ul>
+                  </li>
+                </ul>
+
+                
+               
+                                    <div class="am-topbar-right">
+                                        <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+                                          <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle topbar-btn-login" data-am-dropdown-toggle>其他 <span class="am-icon-caret-down"></span></button>
+                                          <ul class="am-dropdown-content">
+                                            <li><a href="#">注册</a></li>
+                                            <li><a href="#">随便看看</a></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                  
+                                      <div class="am-topbar-right" >
+                                        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm topbar-btn-login" id="topbar-btn-login">登录</button>
+                                      </div>
+               
+
+                
+
+                <div class="am-topbar-form am-form-inline" id="enter-link-layout" >                   
+                    <div class="am-form-group am-form-icon" style="width:100%">
+                        <i class="am-icon-link"></i>
+                        <input type="text" name="enter_link" class="am-form-field enter_link" id="enter_link" placeholder="请输入网址">
+                      </div>
+                  </div>
+                           
+
+
+                
+  
+                
+
+                
+                
+            
+                
+
+              </div>
+            </header>
+         
           <!-- 顶部输入 end-->
+
+          <div class="top-line"></div>
 
 
           <!-- 最左边工具栏 -->
@@ -108,13 +182,15 @@
                   <div class="title tabs show-file-icons active" style="background-color: rgb(37, 37, 38);">
                     <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
                       <div role="tablist" class="tabs-container" style="overflow: hidden;">
+                        
+                        
                         <!-- tab start -->
-                        <div draggable="true" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
-                          title="欢迎使用" aria-selected="false" style="background-color: rgb(45, 45, 45);">
+                        <div draggable="true" id="home_tab" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
+                          title="欢迎使用"  >
                           <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon tab-label italic" title="walkThrough:/d:/Program Files/Microsoft VS Code/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page"
-                            style="color: rgba(255, 255, 255, 0.5);">
+                            >
                             <div class="monaco-icon-label-description-container">
-                              <a class="label-name">欢迎使用</a>
+                              <a class="label-name btn-active-tab">欢迎使用</a>
                             </div>
                           </div>
                           <div class="tab-close">
@@ -129,24 +205,36 @@
                         </div>
 
 
-                        <div draggable="true" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme active" aria-label="Untitled-1, tab"
-                          title="Untitled-1" aria-selected="true" style="border-left-color: rgb(37, 37, 38); border-right-color: rgb(37, 37, 38); background-color: rgb(30, 30, 30);
-                          border-top-color:#007acc;border-top-width:2px;
-                          ">
-                          <div class="monaco-icon-label file-icon untitled-1-name-file-icon ext-file-icon tab-label" title="Untitled-1" style="color: rgb(255, 255, 255);">
+                        <div draggable="true" id="tabid-1" tabindex="1" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="Untitled-1, tab"
+                          title="Untitled-1"  >
+                          <div class="monaco-icon-label file-icon untitled-1-name-file-icon ext-file-icon tab-label" title="Untitled-1">
                             <div class="monaco-icon-label-description-container">
-                              <a class="label-name">Untitled-1</a>
+                              <a class="label-name btn-active-tab">Untitled-1</a>
                             </div>
                           </div>
+                          
                           <div class="tab-close">
                             <div class="monaco-action-bar animated">
                               <ul class="actions-container" role="toolbar" aria-label="选项卡操作">
                                 <li class="action-item" role="presentation">
-                                  <a class="action-label icon close-editor-action" role="button" tabindex="0" title="关闭 (Ctrl+F4)"></a>
+                                  <a class="action-label icon close-editor-action" role="button" tabindex="1" title="关闭 (Ctrl+F4)"></a>
                                 </li>
                               </ul>
                             </div>
                           </div>
+                        </div>
+
+
+
+                        <div draggable="true" tabindex="0" role="presentation" class="tab add_new_tab" aria-label="欢迎使用, tab"
+                          title="欢迎使用" aria-selected="false" style="background-color: rgb(45, 45, 45);">
+                          <div class="monaco-icon-label file-icon  ext-file-icon tab-label italic" 
+                            style="color: rgba(255, 255, 255, 0.5);">
+                            <div class="monaco-icon-label-description-container">
+                              <a class="label-name"><i class="am-icon-plus"></i></a>
+                            </div>
+                          </div>
+                         
                         </div>
 
 
@@ -196,7 +284,16 @@
 
                   <div class="editor-container web-container" role="tabpanel" id="workbench.editors.textResourceEditor" data-keybinding-context="4" aria-hidden="false"
                     aria-label="Untitled-1。无标题文件文本编辑器。，所在组为: 1。" data-mode-id="plaintext">
-                    <webview style="width:100%;height:100%;" id="testwebview" src="https://www.youku.com/" autosize allowpopups disablewebsecurity ></webview>
+                    
+                     <!-- 欢迎使用 -->
+                    <section class="web-section" data-tabid="section-home_tab" id="section-home_tab">
+                        <webview src="file://../assets/page/welcome.html" autosize allowpopups  ></webview>                        
+                    </section>
+                     <!-- 欢迎使用 end -->
+                    <section class="web-section" data-tabid="section-tabid-1" id="section-tabid-1">
+                      <webview id="testwebview" src="https://www.baidu.com/" autosize allowpopups  ></webview>
+                    </section>
+                    
 
                     
                   </div>
@@ -444,49 +541,25 @@
 
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
-
-  <script>
-
-    var win_width,win_height;
-
-  $(window).resize(function(){
-    //allcontainer
-    win_width = $(window).width();
-    win_height = $(window).height();
-    updatelayout();
-
-  });
+  <script src="../assets/js/amazeui.min.js"></script>
+  <script src="../assets/js/dabeizi_common.js"></script>
 
 
-  //更新为最新的窗口大小
-  function updatelayout(){
-    //整体大小变更    
-    setobj_width_height( $("#allcontainer") );
-    setobj_width_height( $("#workbench-main-container") );
-    setobj_width_height( $("#workbench-parts-editor") );
-    setobj_width_height( $(".wincontainer" ));
 
-    //webview 大小调整
-    $(".web-container").css("width",(win_width -50)+ 'px');
-    $(".web-container").css("height",(win_height -22)+ 'px');
-    
-   
-    
-    //左侧高度变更
-    $("#workbench-parts-activitybar").css('height',win_height + 'px');
-    $("#workbench-parts-activitybar > .content").css('height',(win_height -22) + 'px');
+  
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="dabeizi-modal">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"> <div class="am-modal-title">提示</div>
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd">
+            <div class="am-modal-body">
+                ...
+            </div>
 
-    //状态栏 位置调整
-    $("#workbench-parts-statusbar").css('top',(win_height - 22)+ 'px');
-
-
-  }
-
-  function setobj_width_height(obj){
-    obj.css('width',win_width+'px');
-    obj.css('height',win_height+'px');
-  }
-  </script>
+        </div>
+    </div>
+</div>
 
 </body>
 
