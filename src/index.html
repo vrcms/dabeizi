@@ -181,48 +181,10 @@
                 <div class="container" data-keybinding-context="1">
                   <div class="title tabs show-file-icons active" style="background-color: rgb(37, 37, 38);">
                     <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
-                      <div role="tablist" class="tabs-container" style="overflow: hidden;">
+                      <div role="tablist" class="tabs-container" id="tabs-container" style="overflow: hidden;">
                         
                         
                         <!-- tab start -->
-                        <div draggable="true" id="home_tab" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
-                          title="欢迎使用"  >
-                          <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon tab-label italic" title="walkThrough:/d:/Program Files/Microsoft VS Code/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page"
-                            >
-                            <div class="monaco-icon-label-description-container">
-                              <a class="label-name btn-active-tab">欢迎使用</a>
-                            </div>
-                          </div>
-                          <div class="tab-close">
-                            <div class="monaco-action-bar animated">
-                              <ul class="actions-container" role="toolbar" aria-label="选项卡操作">
-                                <li class="action-item" role="presentation">
-                                  <a class="action-label icon close-editor-action" role="button" tabindex="0" title="关闭 (Ctrl+F4)"></a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-
-
-                        <div draggable="true" id="tabid-1" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" title="Untitled-1"  >
-                          <div class="monaco-icon-label file-icon untitled-1-name-file-icon ext-file-icon tab-label" title="Untitled-1">
-                            <div class="monaco-icon-label-description-container">
-                              <a class="label-name btn-active-tab">Untitled-1</a>
-                            </div>
-                          </div>
-                          
-                          <div class="tab-close">
-                            <div class="monaco-action-bar animated">
-                              <ul class="actions-container" role="toolbar" aria-label="选项卡操作">
-                                <li class="action-item" role="presentation">
-                                  <a class="action-label icon close-editor-action" role="button" tabindex="1" title="关闭 (Ctrl+F4)"></a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-
 
 
                         <div draggable="false"  role="presentation" class="tab add_new_tab" title="打开新标签" aria-selected="false" style="background-color: rgb(45, 45, 45);">
@@ -234,9 +196,6 @@
                           </div>
                          
                         </div>
-
-
-
                        
 
 
@@ -280,18 +239,10 @@
 
 
 
-                  <div class="editor-container web-container" role="tabpanel" id="workbench.editors.textResourceEditor" data-keybinding-context="4" aria-hidden="false"
+                  <div class="editor-container web-container" role="tabpanel" id="web-container" data-keybinding-context="4" aria-hidden="false"
                      data-mode-id="plaintext">
                     
-                     <!-- 欢迎使用 -->
-                    <section class="web-section" data-tabid="section-home_tab" id="section-home_tab">
-                        <webview src="file://../assets/page/welcome.html" autosize   ></webview>                        
-                    </section>
-                     <!-- 欢迎使用 end -->
-                    <section class="web-section" data-tabid="section-tabid-1" id="section-tabid-1">
-                      <webview src="https://www.baidu.com/" autosize   ></webview>
-                    </section>
-                    
+                                       
 
                     
                   </div>
@@ -526,12 +477,8 @@
 
 
   <script>
-    //解决每个webview里的链接跳转问题
-  const webviews = document.querySelectorAll('webview');
-Array.prototype.forEach.call(webviews, function (webview) {
-    
+  
 
-});
    
 
     
