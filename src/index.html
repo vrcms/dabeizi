@@ -185,7 +185,7 @@
                         
                         
                         <!-- tab start -->
-                        <div draggable="true" id="home_tab" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
+                        <div draggable="true" id="home_tab" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="欢迎使用, tab"
                           title="欢迎使用"  >
                           <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon tab-label italic" title="walkThrough:/d:/Program Files/Microsoft VS Code/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page"
                             >
@@ -205,8 +205,7 @@
                         </div>
 
 
-                        <div draggable="true" id="tabid-1" tabindex="1" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" aria-label="Untitled-1, tab"
-                          title="Untitled-1"  >
+                        <div draggable="true" id="tabid-1" role="presentation" class="tab close-button-right sizing-fit has-icon-theme" title="Untitled-1"  >
                           <div class="monaco-icon-label file-icon untitled-1-name-file-icon ext-file-icon tab-label" title="Untitled-1">
                             <div class="monaco-icon-label-description-container">
                               <a class="label-name btn-active-tab">Untitled-1</a>
@@ -226,9 +225,8 @@
 
 
 
-                        <div draggable="true" tabindex="0" role="presentation" class="tab add_new_tab" aria-label="欢迎使用, tab"
-                          title="欢迎使用" aria-selected="false" style="background-color: rgb(45, 45, 45);">
-                          <div class="monaco-icon-label file-icon  ext-file-icon tab-label italic" 
+                        <div draggable="false"  role="presentation" class="tab add_new_tab" title="打开新标签" aria-selected="false" style="background-color: rgb(45, 45, 45);">
+                          <div class="monaco-icon-label file-icon  ext-file-icon tab-label " 
                             style="color: rgba(255, 255, 255, 0.5);">
                             <div class="monaco-icon-label-description-container">
                               <a class="label-name"><i class="am-icon-plus"></i></a>
@@ -283,15 +281,15 @@
 
 
                   <div class="editor-container web-container" role="tabpanel" id="workbench.editors.textResourceEditor" data-keybinding-context="4" aria-hidden="false"
-                    aria-label="Untitled-1。无标题文件文本编辑器。，所在组为: 1。" data-mode-id="plaintext">
+                     data-mode-id="plaintext">
                     
                      <!-- 欢迎使用 -->
                     <section class="web-section" data-tabid="section-home_tab" id="section-home_tab">
-                        <webview src="file://../assets/page/welcome.html" autosize allowpopups  ></webview>                        
+                        <webview src="file://../assets/page/welcome.html" autosize   ></webview>                        
                     </section>
                      <!-- 欢迎使用 end -->
                     <section class="web-section" data-tabid="section-tabid-1" id="section-tabid-1">
-                      <webview id="testwebview" src="https://www.baidu.com/" autosize allowpopups  ></webview>
+                      <webview src="https://www.baidu.com/" autosize   ></webview>
                     </section>
                     
 
@@ -344,9 +342,13 @@
               <a class=".zoom-statusbar-item" style="display: none;"></a>
             </div>
 
-            
+            <div class="statusbar-item left" id="status_log">
+                
+            </div>
+
             <div class="statusbar-item left">
               <div class="task-statusbar-item" title="问题">
+
                 <a class="task-statusbar-item-label">
                   <div class="task-statusbar-item-label-error mask-icon" style="background-color: rgb(255, 255, 255);"></div>
                   <div class="task-statusbar-item-label-counter">0</div>
@@ -524,12 +526,15 @@
 
 
   <script>
+    //解决每个webview里的链接跳转问题
+  const webviews = document.querySelectorAll('webview');
+Array.prototype.forEach.call(webviews, function (webview) {
+    
 
-    //webview 内部的连接跳转问题
-    const webView = document.getElementById('testwebview');    
-    webView.addEventListener('new-window', function (e) {
-        webView.src = e.url;
-    });
+});
+   
+
+    
 
     //require('./assets/imports')
     //require('./assets/ex-links')

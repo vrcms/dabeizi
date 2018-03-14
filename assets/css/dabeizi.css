@@ -3,6 +3,10 @@
     font-family: -apple-system,BlinkMacSystemFont,Segoe WPC,Segoe UI,HelveticaNeue-Light,Noto Sans,Microsoft YaHei,PingFang SC,Hiragino Sans GB,Source Han Sans SC,Source Han Sans CN,Source Han Sans,sans-serif;
 }
 
+#dabeizi-modal{
+    color:#333;
+}
+
 
 
 .am-topbar{
@@ -24,8 +28,13 @@ width: 100%;
 }
 
 .enter_link{
-    width: 100%;
-    
+    width: 100%;    
+}
+
+input#enter_link{
+    color:#eee;
+    font-size: 14px;
+    outline: none;
 }
 
 .am-form-inline .am-form-field {
