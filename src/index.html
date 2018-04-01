@@ -117,12 +117,14 @@
               <div class="composite-bar">
                 <div class="monaco-action-bar vertical">
                   <ul class="actions-container" role="toolbar" aria-label="活动视图切换器">
+                    
                     <li class="action-item" role="button" draggable="true" tabindex="0" title="资源管理器 (Ctrl+Shift+E)" aria-label="资源管理器 (Ctrl+Shift+E)">
                       <a class="action-label explore" aria-label="资源管理器 (Ctrl+Shift+E)" title="资源管理器 (Ctrl+Shift+E)" style="background-color: rgb(255, 255, 255);"></a>
                       <div class="badge builder-hidden" aria-hidden="true" aria-label="资源管理器 (Ctrl+Shift+E)" title="资源管理器 (Ctrl+Shift+E)">
                         <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
                       </div>
                     </li>
+
                     <li class="action-item" role="button" draggable="true" tabindex="0" title="搜索 (Ctrl+Shift+F)" aria-label="搜索 (Ctrl+Shift+F)">
                       <a class="action-label search" aria-label="搜索 (Ctrl+Shift+F)" title="搜索 (Ctrl+Shift+F)" style="background-color: rgb(255, 255, 255);"></a>
                       <div class="badge builder-hidden" aria-hidden="true" aria-label="搜索 (Ctrl+Shift+F)" title="搜索 (Ctrl+Shift+F)">
@@ -141,12 +143,21 @@
                         <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
                       </div>
                     </li>
+
                     <li class="action-item" role="button" draggable="true" tabindex="0" title="扩展 (Ctrl+Shift+X)" aria-label="扩展 (Ctrl+Shift+X)">
                       <a class="action-label extensions" aria-label="扩展 (Ctrl+Shift+X)" title="扩展 (Ctrl+Shift+X)" style="background-color: rgb(255, 255, 255);"></a>
                       <div class="badge builder-hidden" aria-hidden="true" aria-label="扩展 (Ctrl+Shift+X)" title="扩展 (Ctrl+Shift+X)">
                         <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
                       </div>
                     </li>
+
+                    <li class="action-item" id="toutiaoapp" role="button" draggable="true" tabindex="0" title="今日头条app" aria-label="今日头条app">
+                        <a class="action-label extensions" aria-label="今日头条app" title="今日头条app" style="background-color: rgb(255, 255, 255);"></a>
+                        <div class="badge builder-hidden" aria-hidden="true" aria-label="今日头条app" title="今日头条app">
+                          <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                        </div>
+                      </li>
+
                   </ul>
                 </div>
               </div>
@@ -304,7 +315,7 @@
                   <div class="task-statusbar-item-label-error mask-icon" style="background-color: rgb(255, 255, 255);"></div>
                   <div class="task-statusbar-item-label-counter">0</div>
                   <div class="task-statusbar-item-label-warning mask-icon" style="background-color: rgb(255, 255, 255);"></div>
-                  <div class="task-statusbar-item-label-counter">0</div>
+                  <div class="task-statusbar-item-label-counter" id="status_bar_msg"></div>
                   <div class="task-statusbar-item-label-info mask-icon builder-hidden" aria-hidden="true" style="background-color: rgb(255, 255, 255);"></div>
                   <div class="task-statusbar-item-label-counter builder-hidden" aria-hidden="true"></div>
                 </a>
@@ -495,6 +506,7 @@
   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
   <script src="../assets/js/amazeui.min.js"></script>
   <script src="../assets/js/dabeizi_common.js"></script>
+  <script src="../assets/js/toutiaoapp.js"></script>
 
 
 
