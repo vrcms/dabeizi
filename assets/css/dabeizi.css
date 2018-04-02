@@ -236,3 +236,13 @@ input#enter_link{
       visibility: visible;
       display: block;
   }
+
+
+
+  /**
+  左侧菜单列表
+  */
+  .action-label.toutiaoweb{
+      -webkit-mask:url('img/toutiaoweb.png') no-repeat 50% 50%;
+      -webkit-mask-size: 22px;
+  }
